@@ -7,7 +7,7 @@ A relatively high contrast theme, with more saturated & playful colours that try
 ### Acknowledgements
 
 This theme was inspired by several others, notably:
-- [Catpuccin](https://github.com/catppuccin/catppuccin);
+- [Catppuccin](https://github.com/catppuccin/catppuccin);
 - [OneDark](https://github.com/joshdick/onedark.vim);
 - [TokyoNight](https://github.com/folke/tokyonight.nvim);
 - [Nord](https://www.nordtheme.com/).

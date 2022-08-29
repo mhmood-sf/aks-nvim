@@ -5,7 +5,7 @@
 A relatively high contrast theme, with more saturated & playful colours that try to strike a balance between aesthetics and usability.
 
 <h4 align="center">
-    <img src="./panes1.png" alt="Aks Color Panes" />
+    <img src="./panes.png" alt="Aks Color Panes" />
 </h4>
 
 ### Acknowledgements

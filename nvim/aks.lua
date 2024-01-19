@@ -35,6 +35,10 @@ For Reference:
 | accent6 | pink   |
 |---------+--------|
 | accent7 | purple |
+|---------+--------|
+| aux0    | bluish |
++---------+--------+
+| aux1    | bluish |
 +---------+--------+
 
 --]]
@@ -69,6 +73,8 @@ local dark = {
     accent5 = "#5596F7",
     accent6 = "#FC56B1",
     accent7 = "#A972FF",
+    aux0    = "#0D3556",
+    aux1    = "#071A4C"
 }
 
 -- Aks Light Variant
@@ -88,7 +94,9 @@ local light = {
     accent4 = "#00C2C2",
     accent5 = "#0066FF",
     accent6 = "#FF0099",
-    accent7 = "#8F00FF"
+    accent7 = "#8F00FF",
+    aux0    = "#BDE0FE",
+    aux1    = "#DFF7FF"
 }
 
 -- Choose variant
@@ -102,11 +110,10 @@ local ovr = vim.g.aks_overrides or {}
 local background = ovr.background or var.shade0
 local foreground = ovr.foreground or var.shade5
 local comment    = ovr.comment    or var.shade3
-local selection  = ovr.selection  or var.shade2
 local gutter     = ovr.gutter     or var.shade2
 local menu       = ovr.menu       or var.shade1
 local winsep     = ovr.winsep     or var.shade3
-local cursor     = ovr.cursor     or var.accent
+local selection  = ovr.selection  or var.aux0
 
 -- Colors
 local red    = ovr.red    or var.accent0
@@ -189,8 +196,8 @@ hi("Todo",           { fg = purple })
 -- Highlighting Groups (descriptions and ordering from `:h highlight-groups`)
 hi("ColorColumn",  { bg = var.shade1 })
 hi("Conceal",      {})
-hi("Cursor",       { fg = background, bg = cursor })
-hi("lCursor",      { fg = background, bg = cursor })
+hi("Cursor",       { fg = background })
+hi("lCursor",      { fg = background })
 hi("CursorIM",     {})
 hi("CursorColumn", { bg = var.shade1 })
 
@@ -207,7 +214,7 @@ hi("DiffDelete", { bg = red, fg = background })
 hi("DiffText",   { bg = orange, fg = background })
 
 if hide_bufend then
-    hi("EndOfBuffer", { fg = background })
+    hi("EndOfBuffer", { fg = gutter })
 end
 
 hi("TermCursor",       { bg = blue })
@@ -228,9 +235,11 @@ hi("ModeMsg",          { fg = pink })
 hi("MsgArea",          { fg = yellow })
 hi("MsgSeparator",     { fg = purple })
 hi("MoreMsg",          { fg = purple })
-hi("NonText",          { fg = var.shade1 })
+hi("NonText",          { fg = var.shade2 })
 hi("Normal",           { fg = foreground, bg = background })
 hi("NormalFloat",      { fg = foreground, bg = var.shade1 })
+hi("FloatBorder",      { fg = blue,       bg = var.shade1 })
+hi("FloatTitle",       { fg = var.shade0, bg = purple })
 hi("NormalNC",         {})
 hi("Pmenu",            { fg = foreground, bg = menu })
 hi("PmenuSel",         { fg = background, bg = blue })
@@ -239,7 +248,7 @@ hi("PmenuThumb",       { bg = selection })
 hi("Question",         { fg = purple })
 hi("QuickFixLine",     { fg = background, bg = yellow })
 hi("Search",           { fg = background, bg = yellow })
-hi("SpecialKey",       { fg = var.shade1 })
+hi("SpecialKey",       { fg = var.shade4 })
 hi("SpellBad",         { fg = red, gui = "underline" })
 hi("SpellCap",         { fg = orange })
 hi("SpellLocal",       { fg = orange })
@@ -283,4 +292,4 @@ hi("DiagnosticSignHint",         { fg = cyan })
 vim.o.background = use_light and "light" or "dark"
 
 -- Expose highlight function
-return { hi = hi }
+return { hi = hi, colors = var }

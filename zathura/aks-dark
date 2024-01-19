@@ -20,10 +20,10 @@ set completion-group-fg     "#ECEFF4" # White 0
 set completion-group-bg     "#222430" # Black 1
 
 set statusbar-fg            "#ECEFF4" # White 0
-set statusbar-bg            "#222430" # Black 1
+set statusbar-bg            "#17171C" # Black 0
 
 set inputbar-fg             "#ECEFF4" # White 0
-set inputbar-bg             "#222430" # Black 1
+set inputbar-bg             "#17171C" # Black 0
 
 set notification-fg         "#17171C" # Black 0
 set notification-bg         "#5596F7" # Blue

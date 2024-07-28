@@ -10,8 +10,8 @@ vim.g.colors_name = "aks"
 -- Aks Dark Variant
 local dark = {
     -- Shades, going from darkest (0) to lightest (7).
-    shade0  = "#17171C",
-    shade1  = "#222430",
+    shade0  = "#222430",
+    shade1  = "#36394B",
     shade2  = "#3E4856",
     shade3  = "#5B697B",
     shade4  = "#CBD1EC",
@@ -50,8 +50,8 @@ local light = {
     shade3  = "#ABB3CA",
     shade4  = "#5B697B",
     shade5  = "#3E4856",
-    shade6  = "#222430",
-    shade7  = "#17171C",
+    shade6  = "#36394B",
+    shade7  = "#222430",
     accent0 = "#FF1D4E",
     accent1 = "#FC8E4E",
     accent2 = "#E1B900",

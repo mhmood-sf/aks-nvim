@@ -11,12 +11,12 @@ vim.g.colors_name = "aks"
 local dark = {
     -- Shades, going from darkest (0) to lightest (7).
     shade0  = "#222430",
-    shade1  = "#36394B",
-    shade2  = "#3E4856",
-    shade3  = "#5B697B",
-    shade4  = "#CBD1EC",
-    shade5  = "#DADEF1",
-    shade6  = "#E5E9F0",
+    shade1  = "#2B2E3D",
+    shade2  = "#36394B",
+    shade3  = "#3E4856",
+    shade4  = "#5B697B",
+    shade5  = "#CBD1EC",
+    shade6  = "#E2E6F8",
     shade7  = "#ECEFF4",
 
     -- Red
@@ -37,7 +37,7 @@ local dark = {
     accent7 = "#A972FF",
 
     -- Auxiliary colors, both bluish.
-    aux0    = "#0D3556",
+    aux0    = "#1C517D",
     aux1    = "#071A4C"
 }
 
@@ -73,11 +73,11 @@ local ovr = vim.g.aks_overrides or {}
 
 -- UI Shades
 local background = ovr.background or var.shade0
-local foreground = ovr.foreground or var.shade5
-local comment    = ovr.comment    or var.shade3
-local gutter     = ovr.gutter     or var.shade2
+local foreground = ovr.foreground or var.shade6
+local comment    = ovr.comment    or var.shade4
+local gutter     = ovr.gutter     or var.shade3
 local menu       = ovr.menu       or var.shade1
-local winsep     = ovr.winsep     or var.shade3
+local winsep     = ovr.winsep     or var.shade2
 local selection  = ovr.selection  or var.aux0
 
 -- Colors
@@ -197,9 +197,9 @@ hi("Substitute",       { fg = background, bg = yellow })
 hi("LineNr",           { fg = gutter })
 hi("LineNrAbove",      {})
 hi("LineNrBelow",      {})
-hi("CursorLineNr",     { fg = var.shade4 })
-hi("CursorLineFold",   { fg = var.shade4 })
-hi("CursorLineSign",   { fg = var.shade4 })
+hi("CursorLineNr",     { fg = var.shade5 })
+hi("CursorLineFold",   { fg = var.shade5 })
+hi("CursorLineSign",   { fg = var.shade5 })
 hi("MatchParen",       { fg = blue, gui = "underline" })
 hi("ModeMsg",          { fg = pink })
 hi("MsgArea",          { fg = yellow })
@@ -222,7 +222,7 @@ hi("PmenuThumb",       { bg = selection })
 hi("Question",         { fg = purple })
 hi("QuickFixLine",     { fg = background, bg = yellow })
 hi("Search",           { fg = background, bg = yellow })
-hi("SpecialKey",       { fg = var.shade4 })
+hi("SpecialKey",       { fg = var.shade3 })
 hi("SpellBad",         { fg = red, gui = "underline" })
 hi("SpellCap",         { fg = orange })
 hi("SpellLocal",       { fg = orange })
